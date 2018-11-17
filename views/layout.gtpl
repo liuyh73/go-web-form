@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>go-web-form</title>
-    <link rel="icon" href="/static/images/icon.png" />
+    <link rel="icon" href="/static/images/favicon.ico" />
   </head>
   <body>
     {{ if . }}
