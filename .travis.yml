@@ -1,0 +1,18 @@
+language: go
+go: 1.9
+sudo: required
+services: docker
+
+before_install:
+  - go get -u github.com/codegangsta/negroni
+  - go get -u github.com/gorilla/mux
+  - go get -u github.com/unrolled/render
+  - go get -u github.com/mattn/go-sqlite3
+
+install:
+  - docker build . --rm -t liuyh73/go-web-form
+  - docker run -d -p 127.0.0.1:8080
+
+script:
+  - docker ps | grep -q go-web-form
+
