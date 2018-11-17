@@ -42,7 +42,6 @@ func UploadHandler(formatter *render.Render) http.HandlerFunc {
 			// 上传文件是需要调用req.ParseMultipartForm, 参数为最大占用存储空间,将request body转化为multipart/form-data,
 			req.ParseMultipartForm(32 << 20)
 			// 获取文件, req.FormFile("")参数为input表单的name属性
-			fmt.Println("*****************************")
 			file, handler, err := req.FormFile("uploadfile")
 			defer file.Close()
 			if err != nil {
