@@ -1,4 +1,4 @@
-FROM golang:1.9
+FROM golang:latest
 MAINTAINER liuyh73  "15989067460@163.com"
 # 该指令用于配置工作目录，其参数应该使用绝对目录。
 WORKDIR $GOPATH/src/github.com/liuyh73/go-web-form
